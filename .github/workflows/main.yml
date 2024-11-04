@@ -21,6 +21,11 @@ jobs:
       run: pip install -r requirements.txt
     - name: Build site
       run: mkdocs build
+    - name: Clean old files
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az storage blob delete-batch --account-name azurestaticsite --auth-mode key -s "\$web"
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
