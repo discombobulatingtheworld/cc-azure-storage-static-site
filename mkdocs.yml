@@ -1,0 +1,19 @@
+site_name: Hello Cloud Computing UCU
+repo_url: https://github.com/discombobulatingtheworld/cc-azure-storage-static-site
+repo_name: discombobulatingtheworld/cc-azure-storage-static-site
+nav:
+  - Home: index.md
+plugins:
+  - mkdocs-jupyter
+  - search
+  - tags
+theme: 
+  name: material
+  language: es
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: deep purple
+  icon:
+    repo: fontawesome/brands/github
+use_directory_urls: true
